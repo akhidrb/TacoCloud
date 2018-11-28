@@ -40,7 +40,7 @@ public class JdbcOrderRepository implements OrderRepository {
 		long orderId = saveOrderDetails(order);
 		List<Taco> tacos = order.getTacos();
 		for (Taco taco: tacos) {
-			saveTacoToOrder(taco, orderId);
+			saveTacoToOrder(taco.getId(), orderId);
 		}
 		return order;
 	}
@@ -55,10 +55,10 @@ public class JdbcOrderRepository implements OrderRepository {
 				.longValue();
 	}
 	
-	private void saveTacoToOrder(Taco taco, long orderId) {
+	private void saveTacoToOrder(long tacoId, long orderId) {
 		Map<String, Object> values = new HashMap<>();
 		values.put("tacoOrder", orderId);
-		values.put("taco", taco);
+		values.put("taco", tacoId);
 		orderTacoInserter.execute(values);
 	}
 	
