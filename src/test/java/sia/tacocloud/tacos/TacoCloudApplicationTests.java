@@ -1,4 +1,4 @@
-package sia.tacocloud;
+package sia.tacocloud.tacos;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
