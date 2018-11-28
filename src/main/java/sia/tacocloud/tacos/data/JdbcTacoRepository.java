@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import lombok.extern.slf4j.Slf4j;
 import sia.tacocloud.tacos.Taco;
 
 @Repository

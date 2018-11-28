@@ -33,11 +33,10 @@ public class OrderController {
 	
 	@PostMapping
 	public String processOrder( Order order, SessionStatus sessionStatus) {
-
+		log.info("Order submitted: " + order);
 		orderRepo.save(order);
 		sessionStatus.setComplete();
 		
-		log.info("Order submitted: " + order);
 		return "redirect:/";
 	}
 	
