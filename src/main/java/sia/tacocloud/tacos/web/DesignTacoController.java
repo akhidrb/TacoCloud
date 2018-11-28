@@ -68,8 +68,7 @@ public class DesignTacoController {
 	
 	@PostMapping
 	public String processDesign(Taco design,
-								@ModelAttribute Order order) {
-		log.info("Processing design: " + design);		
+								@ModelAttribute Order order) {		
 		Taco saved = tacoRepo.save(design);
 		order.addDesign(saved);
 		return "redirect:/orders/current";
