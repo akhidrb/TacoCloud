@@ -45,9 +45,7 @@ public class JdbcTacoRepository implements TacoRepository {
 						Arrays.asList(taco.getName(),
 								new Timestamp(taco.getCreatedAt().getTime())));
 		KeyHolder keyHolder = new GeneratedKeyHolder();
-		log.info("KeyHolder: " + keyHolder.getKey());
 		jdbc.update(psc, keyHolder);
-		log.info("KeyHolder: " + keyHolder.getKey());		
 		return keyHolder.getKey().longValue();
 	}
 	
