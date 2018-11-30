@@ -25,7 +25,6 @@ import sia.tacocloud.tacos.data.IngredientRepository;
 import sia.tacocloud.tacos.data.TacoRepository;
 import sia.tacocloud.tacos.Taco;
 
-@Slf4j
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("order")
@@ -49,7 +48,6 @@ public class DesignTacoController {
 	public Taco taco() {
 		return new Taco();
 	}
-	
 	
 	@GetMapping
 	public String showDesignForm(Model model) {

@@ -1,10 +1,13 @@
 package sia.tacocloud.tacos;
 
+import javax.persistence.Entity;
+
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
+@Entity
 public class Ingredient {
 	
 	private final String id;
